@@ -104,7 +104,6 @@ export class MenuSystemDatabase {
                 }
 
                 configs.push("menusystem/data/ishitman3available.json")
-                configs.push("menusystem/pages/hub/modals/roadmap/modal.json")
                 configs.push(
                     "menusystem/pages/hub/data/isfullmenuavailable.json",
                 )
@@ -304,8 +303,6 @@ export class MenuSystemDatabase {
                             $else: false,
                         },
                     }
-                case "/pages/hub/modals/roadmap/modal.json":
-                    return getConfig("Roadmap", false)
                 case "/pages/hub/hub_page.json":
                     return getConfig("HubPageData", false)
                 case "/pages/hub/data/isfullmenuavailable.json":

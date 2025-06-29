@@ -19,7 +19,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 
-import Roadmap from "../static/Roadmap.json"
 import StoreData from "../static/StoreData.json"
 import FilterData from "../static/FilterData.json"
 import LocationsData from "../static/LocationsData.json"
@@ -121,7 +120,6 @@ import { fastClone } from "./utils"
  * @private
  */
 const configs = {
-    Roadmap,
     StoreData,
     FilterData,
     LocationsData,
