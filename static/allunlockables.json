@@ -12777,7 +12777,7 @@
         "Capabilities": [],
         "Qualities": {},
         "Properties": {
-            "LoadoutSlot": "concealedweapon",
+            "LoadoutSlot": "gear",
             "Rarity": "common",
             "RepositoryId": "d70c739a-6956-4771-ba9c-7f3c9206f762",
             "Quality": 4,
@@ -12799,7 +12799,7 @@
         "Capabilities": [],
         "Qualities": {},
         "Properties": {
-            "LoadoutSlot": "concealedweapon",
+            "LoadoutSlot": "gear",
             "Rarity": "common",
             "RepositoryId": "ed45f927-589d-4bad-ac1b-67e41c32e5ee",
             "Quality": 4,
