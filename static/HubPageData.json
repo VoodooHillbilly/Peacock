@@ -110,15 +110,6 @@
                     }
                 },
                 {
-                    "$if $gamepersistentdata attraction_to_hub_flow": {
-                        "$then": {
-                            "$include": {
-                                "$path": "menusystem/pages/hub/modals/roadmap/showmodal_element.json"
-                            }
-                        }
-                    }
-                },
-                {
                     "$include": {
                         "$path": "menusystem/pages/hub/modals/vrtutorial/showmodal_element.json"
                     }
