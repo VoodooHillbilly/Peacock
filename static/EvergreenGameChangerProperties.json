@@ -5790,7 +5790,22 @@
                             "53284129-c50a-47a7-9efa-caa3b7503826",
                             "7c691c03-7c6b-4eb4-9a68-898efe5eedaa",
                             "3dbbbb5e-61a7-4cae-8df0-0e911e744dca",
-                            "ccdd6689-092d-49b2-85f8-416a02e25566"
+                            "ccdd6689-092d-49b2-85f8-416a02e25566",
+                            "c601c095-e1dc-4490-aeae-e8e200dd9ac8",
+                            "1bfa04db-6d53-4979-9e3a-eeb45925e4bf",
+                            "aaffeb68-c597-4ca8-9b8d-802ce08e1187",
+                            "71d7c7eb-812b-40d5-9bb7-029759f0bf01",
+                            "e68927af-746d-41fa-83e2-402da0163262",
+                            "fc715a9a-3bf1-4768-bd67-0def61b92551",
+                            "9d5daae3-10c8-4f03-a85d-9bd92861a672",
+                            "4aa57da4-07d7-44aa-9a71-8469287d43e2",
+                            "274a5798-ff1a-473e-9213-7f39a5a798b5",
+                            "356b016c-fdb3-47d3-913c-3973e6a5a8cf",
+                            "9f0d143a-657c-4e8f-9f2b-3ab86dcd048b",
+                            "9f63cd09-94f7-483b-93d9-4ffed6a0b331",
+                            "ee25fc91-e42e-4044-99b4-b3c4206d250d",
+                            "f591d4a3-5176-4847-a149-d86f62e924a3",
+                            "b1ad87c7-5bec-4ce6-a584-96058e11fae0"
                         ]
                     },
                     "States": {
@@ -6777,7 +6792,15 @@
                             "6f935509-1e77-4991-baa4-d5515c20ab3e",
                             "4ca96340-ae60-427b-a011-9e296cd67fd9",
                             "ba5c5c48-3d2e-4d4d-9dbe-f57b95200b1a",
-                            "3fc1a8f8-f8fc-422e-884a-730ca9491737"
+                            "3fc1a8f8-f8fc-422e-884a-730ca9491737",
+                            "2699ad7a-185a-464f-b5c6-7d58d0fd5867",
+                            "b20fc045-e453-4280-8b18-b0a0e5c17236",
+                            "2b869559-0c63-4731-844c-4d96554edf99",
+                            "3dd70135-55c0-4199-b55b-d80ea1ac070b",
+                            "4e6bbdeb-74c0-4b7f-a1aa-1c16ab26d6ad",
+                            "9cd12159-8374-451a-b43a-c27060fe0bc7",
+                            "c01e5b78-bbb1-479f-88c1-f8b2324e0234",
+                            "00bc7fdc-8cce-4cb5-b31a-4d2d8b4156f8"
                         ]
                     },
                     "States": {
@@ -7878,7 +7901,8 @@
                         "Tools": [
                             "b970a355-4296-4acc-9ec9-584e69a79eed",
                             "8b114fce-586b-4b06-b446-75d0bb4a4cfb",
-                            "6dadf34c-00f2-43f9-b4e8-6763502aa2c8"
+                            "6dadf34c-00f2-43f9-b4e8-6763502aa2c8",
+                            "490926c9-4a74-4cac-952b-d203af4e498a"
                         ]
                     },
                     "States": {
@@ -8133,7 +8157,14 @@
                     },
                     "Context": {
                         "update_counter": 0,
-                        "MyPayout": "1"
+                        "MyPayout": "1",
+                        "KillItems": [
+                        "3f9cf03f-b84f-4419-b831-4704cff9775c",
+                        "d64f77a8-6271-484a-9450-ad75740ce461",
+                        "89957566-316c-4014-88c2-6a8bdfc31108",
+                        "00d1f430-1192-4562-be0f-5538b6d0c575",
+                        "ba5cd3a3-9b90-4088-9b5b-25ca5f3b21b5"
+                        ]
                     },
                     "States": {
                         "SafehouseDummy": {},
@@ -8160,10 +8191,15 @@
                                                 "$eq": ["$Value.IsTarget", true]
                                             },
                                             {
-                                                "$eq": [
-                                                    "$Value.KillItemRepositoryId",
-                                                    "3f9cf03f-b84f-4419-b831-4704cff9775c"
-                                                ]
+                                                "$any": {
+                                                    "?": {
+                                                        "$eq": [
+                                                            "$.#",
+                                                            "$Value.KillItemRepositoryId"
+                                                        ]
+                                                    },
+                                                    "in": "$.KillItems"
+                                                }
                                             }
                                         ]
                                     },
@@ -8964,7 +9000,10 @@
                             "f1f89faf-a441-4492-b442-9a923b5ecfd1",
                             "f2a74ebc-8f07-4845-b421-2339988e1994",
                             "1bbf0ed5-0515-4599-a4c9-454ce59cff44",
-                            "ccc6b901-6f13-43be-88a1-6750cdb4a6ff"
+                            "ccc6b901-6f13-43be-88a1-6750cdb4a6ff",
+                            "3e3819ca-4d19-4e0a-a238-4bd16c730e61",
+                            "54f800df-0c14-4a6f-873f-16497b4edf00",
+                            "5db9cefd-391e-4c35-a4c4-bb672ac9b996"
                         ]
                     },
                     "States": {
@@ -11356,7 +11395,13 @@
                     },
                     "Context": {
                         "update_counter": 0,
-                        "MyPayout": "1"
+                        "MyPayout": "1",
+                        "KillItems": [
+                        "76d1f44c-8a78-462a-a39c-23d4101f4d6f",
+                        "0f3ad0c8-ca99-4f5c-8436-da68f34fc4b5",
+                        "d689f87e-c3b1-4018-8e78-2f0025cde2a9",
+                        "b1b40b14-eded-404f-b933-c4da15e85644"
+                        ]
                     },
                     "States": {
                         "SafehouseDummy": {
@@ -11391,10 +11436,15 @@
                                             "$eq": ["$Value.IsTarget", true]
                                         },
                                         {
-                                            "$eq": [
-                                                "$Value.KillItemRepositoryId",
-                                                "76d1f44c-8a78-462a-a39c-23d4101f4d6f"
-                                            ]
+                                            "$any": {
+                                                "?": {
+                                                    "$eq": [
+                                                        "$.#",
+                                                        "$Value.KillItemRepositoryId"
+                                                    ]
+                                                },
+                                                "in": "$.KillItems"
+                                            }
                                         }
                                     ]
                                 },
@@ -11491,7 +11541,9 @@
                             "5631dace-7f4a-4df8-8e97-b47373b815ff",
                             "9488fa1e-10e1-49c9-bb24-6635d2e5bd49",
                             "af2b1a36-a7f0-4003-aae4-a6076402542d",
-                            "fecf585b-4bdb-4a9b-9ab0-2bc44c6bd84a"
+                            "fecf585b-4bdb-4a9b-9ab0-2bc44c6bd84a",
+                            "c03498c1-db54-402a-9923-63ada447a4b8",
+                            "cdab8f33-0491-497c-91c2-316c77d59e55"
                         ]
                     },
                     "States": {
@@ -11631,7 +11683,10 @@
                             "e55eb9a4-e79c-43c7-970b-79e94e7683b7",
                             "92330cd4-1bb1-419e-98d3-ef26631504bf",
                             "cad726d7-331d-4601-9723-6b8a17e5f91b",
-                            "490493af-64db-4692-b32e-d691d86bc82a"
+                            "490493af-64db-4692-b32e-d691d86bc82a",
+                            "1a852006-e632-401f-aedc-d0cf76521b1f",
+                            "33c16292-7f60-4f0b-8ea0-bae80bc31d1a",
+                            "490926c9-4a74-4cac-952b-d203af4e498a"
                         ]
                     },
                     "States": {
@@ -13536,7 +13591,9 @@
                             "c7296c5f-6c0e-4d52-98cd-e70a0d329e73",
                             "8e445d94-9294-4087-af0d-178ef1f8c8f7",
                             "1e2bc40b-505a-4cc6-a09c-94470470985b",
-                            "248cbd89-9923-452a-8cda-a5f76d8930dc"
+                            "248cbd89-9923-452a-8cda-a5f76d8930dc",
+                            "b549ea89-e9cc-44f4-87ae-7145a7060028",
+                            "9074303b-a253-4c6a-b1b0-43412622b521"
                         ]
                     },
                     "States": {
