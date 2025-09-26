@@ -35,6 +35,7 @@ import { writeFileSync } from "fs"
 import { getFlag } from "./flags"
 import { getConfig, getVersionedConfig } from "./configSwizzleManager"
 import { compare } from "semver"
+import assert from "assert"
 
 /**
  * True if the server is being run by the launcher, false otherwise.
@@ -43,7 +44,7 @@ export const IS_LAUNCHER = process.env.IS_PEACOCK_LAUNCHER === "true"
 
 export const ServerVer: ServerVersion = {
     _Major: 8,
-    _Minor: 20,
+    _Minor: 21,
     _Build: 0,
     _Revision: 0,
 }
@@ -590,7 +591,7 @@ export const nilUuid = "00000000-0000-0000-0000-000000000000"
 
 export const hitmapsUrl = "https://backend.rdil.rocks/partners/hitmaps/contract"
 
-export const vrTutorialId = "2d106f47-ee07-45f6-862e-77ae02d38725"
+export const vrTutorialId = "47fdffe9-c453-45ad-ad96-ac6f63494c40"
 
 export function isObjectiveActive(
     objective: MissionManifestObjective,
@@ -840,4 +841,17 @@ export function extractResourcesVersion(
             _Revision: 0,
         }
     }
+}
+
+export function parsePageNumber(page: unknown): number {
+    page ||= 0
+
+    if (typeof page === "string") {
+        page = parseInt(page, 10)
+    }
+
+    assert.equal(typeof page, "number")
+
+    page = Math.max(page as number, 0)
+    return page as number
 }
