@@ -29999,7 +29999,7 @@
         "Capabilities": [],
         "Qualities": {},
         "Properties": {
-            "LoadoutSlot": "concealedweapon",
+            "LoadoutSlot": "gear",
             "Rarity": "common",
             "RepositoryId": "06f5a374-306b-4b79-b611-50c710fdb5c1",
             "Quality": 4,
